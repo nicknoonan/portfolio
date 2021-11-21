@@ -1,0 +1,97 @@
+.App {
+  font-family: Helvetica, sans-serif;
+  box-sizing: border-box;
+  margin: auto;
+  /* margin-top: 25px; */
+  /* border: 2px solid red; */
+  width: 100%;
+}
+/* reset preset styling */
+.html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, font, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  outline: 0;
+  font-weight: inherit;
+  font-style: inherit;
+  font-size: 100%;
+  font-family: inherit;
+  vertical-align: baseline;
+}
+.narrow {
+  width: 50%;
+}
+
+
+.flex-container {
+  /* border: 3px solid orange; */
+  margin: auto;
+  display: inline-flex;
+  /* border: 2px solid red; */
+  height: auto;
+}
+
+/* navigation */
+.navigation {
+  box-sizing: border-box;
+  justify-content: center;
+  display: inline-flex;
+  border-bottom: 1px solid gray;
+  width: 100%;
+  color: black;
+  text-decoration: none;
+  position: sticky;
+  top: 0;
+  background-color: white;
+}
+.navigation-links {
+  font-size: 25px;
+  width: 50%;
+  margin: 10px;
+  /* border: 1px solid red; */
+}
+
+.navigation-link {
+  /* border: 1px solid orange; */
+  margin: 5px 5px;
+  color: inherit;
+  text-decoration: inherit;
+}
+.navigation-link:hover {
+  text-decoration: overline;
+}
+.navigation-active {
+  text-decoration: overline;
+}
+
+.navigation-icons {
+  width: 50%;
+  /* border: 1px solid blue; */
+  text-align: right;
+}
+
+.navigation-icons img {
+  margin: 0px;
+  /* border: 1px solid black; */
+  width: 35px;
+}
+
+#github {
+  margin: 6px 15px;
+}
+#linkedin {
+  margin: 4px;
+  margin-right: 30px;
+}
+.break {
+  /* border: 1px solid black; */
+  width: 100%;
+  box-sizing: border-box;
+}
