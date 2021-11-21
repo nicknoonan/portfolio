@@ -1,4 +1,4 @@
-import { BrowserRouter, Route, Routes, Link } from "react-router-dom";
+import { Route, Routes, Link } from "react-router-dom";
 import HomeRoute from './HomeRoute/HomeRoute';
 import AboutRoute from './AboutRoute/AboutRoute';
 import WorkRoute from './WorkRoute/WorkRoute';
@@ -16,33 +16,45 @@ function AllRoutes() {
     </Routes>
   );
 }
+const navinactive = "navigation-link";
+const navactive = "navigation-link navigation-active";
+let initial_links = [
+  {
+    to: '/',
+    val: 'home',
+    key: '0'
+  },
+  {
+    to: '/about',
+    val: 'about',
+    key: '1'
+  },
+  {
+    to: '/work',
+    val: 'work',
+    key: '2'
+  },
+  {
+    to: '/contact',
+    val: 'contact',
+    key: '3'
+  }
+];
 
 function Navigation() {
-  let initial_links = [
-    <Link className='navigation-link' key={0} to='/' val="home" >home</Link>,
-    <Link className='navigation-link' key={1} to='/about' val="about" >about</Link>,
-    <Link className='navigation-link' key={2} to='/work' val="work" >work</Link>,
-    <Link className='navigation-link' key={3} to='/contact' val="contact" >contact</Link>];
-  //
-  const [links, set_links] = useState(initial_links);
-
-  let navinactive = "navigation-link";
-  let navactive = "navigation-link navigation-active"
-
-  let location = window.location.pathname;
-  let new_links = links.map((link) => {
-    console.log(link.props.to);
-    console.log(location);
-    if (link.props.to === location) {
-      //link.props.className += ' navigation-active';
-      //return <Link className='navigation-link navigation-active' to={link.props.to}>{link.props.val}</Link>;
-    }
-    return link;
+  const location = window.location.pathname;
+  function handleNav(event) {
+    location = event.target.props.to;
+  }
+  console.log(location);
+  let links_render = initial_links.map((link) => {
+    let class_name = (link.to === location) ? navactive : navinactive;
+    return <Link className={class_name} to={link.to} key={link.key} onClick={handleNav}>{link.val}</Link>;
   });
   return (
     <div className='navigation'>
       <div className='navigation-links'>
-        {links}
+        {links_render}
       </div>
       <div className='navigation-icons'>
         <a href='https://github.com/nicknoonan'><img id='github' src='github.jpg' /></a>

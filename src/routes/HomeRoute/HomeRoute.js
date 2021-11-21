@@ -5,21 +5,9 @@ let intro_subheading_text = "Mountains can’t climb themselves. Computers don�
 let greeting_text = "Hi there I’m Nick, I’m a computer scientist that loves embedded systems, cloud architecture, bourbon, and adventures. Welcome to nicknoonan.net. P.S. I’m probably staring a computer screen writing code right now.";
 let about_header_text = "learn more about me!";
 let about_subheading_text = "Trust me I’m not that interesting, but here’s a page dedicated to me by me. I enjoy nerdy science stuff, programming, outdoor adventures, and counting the number of atoms in the universe.";
-let _400_300 = "https://via.placeholder.com/400x300";
-let _200_150 = "https://via.placeholder.com/200x150";
 let climbing_gif = "tr.gif"
 let headshot = "headshot.jpg"
 function HomeRoute() {
-  //console.log(window.innerWidth);
-  //if (window.innerWidth > 1100) {
-  //  headshot = _400_300;
-  //}
-  //else {
-  //  headshot = _200_150;
-  //  alert("here");
-  //}
-  //console.log(document.getElementById("navigation-link navigation-home"));
-  //console.log(document.querySelector("nav-home"));
   return (
     <div className='homeroute'>
       {/* intro */}
@@ -39,32 +27,37 @@ function HomeRoute() {
           </div>
           {/* headshot or somesort of background overlay */}
           <div className='homeroute-headshot'>
-            <img id="climbing-gif" src={climbing_gif}></img>
+            <img id="climbing-gif" src={climbing_gif} alt="climbing jim dandy on table rock, nc"></img>
           </div>
         </div>
       </div>
       {/* greeting */}
       <div className='homeroute-greeting-break break'>
+        {/* greeting text container */}
         <div className='homeroute-greeting'>
+          {/* greeting text */}
           <h2>{greeting_text}</h2>
         </div>
       </div>
       {/* about summary */}
       <div className='homeroute-about-break break'>
         {/* display contents flex but centered horizontally */}
-        <div className='flex-container'>
+        <div className='flex-container' >
           {/* headshot or somesort of background overlay */}
           <div className='homeroute-headshot'>
-            <img src="headshot.jpg"></img>
+            {/* headshot image */}
+            <a href='/about'><img src={headshot} alt='nick noonan'></img></a>
           </div>
           <div className='homeroute-about-container heading-container'>
-            {/* intro image header */}
+            {/* about image header */}
             <div className='homeroute-header'>
-              <h1>{about_header_text}</h1>
+              {/* about headshot */}
+              <a href='/about'><h1>{about_header_text}</h1></a>
             </div>
-            {/* intro image subheading */}
+            {/* about subheading */}
             <div className='homeroute-subheading'>
-              <p1>{about_subheading_text}</p1>
+              {/* about text */}
+              <a href='/about'><p1>{about_subheading_text}</p1></a>
             </div>
           </div>
         </div>
