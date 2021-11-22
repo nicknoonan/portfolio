@@ -6,6 +6,12 @@
   /* border: 2px solid red; */
   width: 100%;
 }
+:root {
+  --primary-color: #2b6777;
+  --primary-color-light: #c8d8e4;
+  --secondary-color: #52ab98;
+  --accent-color: #f2f2f2;
+}
 /* reset preset styling */
 .html, body, div, span, applet, object, iframe,
 h1, h2, h3, h4, h5, h6, p, blockquote, pre,
@@ -51,8 +57,10 @@ a {
   width: 100%;
   color: black;
   text-decoration: none;
+  position: -webkit-sticky;
+  z-index: 110;
   position: sticky;
-  top: 0;
+  top: 0px;
   background-color: white;
 }
 .navigation-links {
@@ -95,4 +103,18 @@ a {
   /* border: 1px solid black; */
   width: 100%;
   box-sizing: border-box;
+}
+
+@media screen and (max-width: 520px) {
+  .navigation {
+    display: block;
+    padding-top: 3px;
+    text-align: center;
+  }
+  .navigation-icons, .navigation-links {
+    text-align: center;
+    margin-left: 0;
+    margin-right: 0;
+    width: 100%;
+  }
 }
