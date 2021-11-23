@@ -11,6 +11,8 @@
   --primary-color-light: #c8d8e4;
   --secondary-color: #52ab98;
   --accent-color: #f2f2f2;
+  --gray-color: rgb(240, 240, 240);
+  /* --gray-color: rgb(200, 200, 200); */
 }
 /* reset preset styling */
 .html, body, div, span, applet, object, iframe,
@@ -53,7 +55,7 @@ a {
   box-sizing: border-box;
   justify-content: center;
   display: inline-flex;
-  border-bottom: 1px solid rgba(128, 128, 128, 0.5);
+  border-bottom: 2px solid var(--primary-color);
   width: 100%;
   color: black;
   text-decoration: none;
@@ -61,7 +63,7 @@ a {
   z-index: 110;
   position: sticky;
   top: 0px;
-  background-color: white;
+  background-color: rgba(255, 255, 255, 0.80);
 }
 .navigation-links {
   font-size: 25px;
@@ -103,6 +105,7 @@ a {
   /* border: 1px solid black; */
   width: 100%;
   box-sizing: border-box;
+  background-color: var(--gray-color);
 }
 
 @media screen and (max-width: 520px) {
