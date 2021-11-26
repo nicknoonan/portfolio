@@ -1,3 +1,4 @@
+cd /home/portfolio
 sudo docker-compose build
 sudo docker stop nick_portfolio_container > /dev/null
 sudo docker container rm nick_portfolio_container > /dev/null
