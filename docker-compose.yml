@@ -1,0 +1,9 @@
+version: "3.9"
+services:
+  portfolio:
+    build:
+      .
+    expose:
+      - "80"
+    ports:
+      - "80:80"
