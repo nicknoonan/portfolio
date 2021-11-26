@@ -3,6 +3,7 @@ services:
   portfolio:
     build:
       .
+    image: nick_portfolio:latest
     expose:
       - "80"
     ports:
