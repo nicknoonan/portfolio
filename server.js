@@ -3,7 +3,6 @@ const path = require('path');
 const express = require('express');
 const PORT = process.env.PORT || 80;
 //
-//
 //middleware
 const app = express();
 app.use(express.json());
