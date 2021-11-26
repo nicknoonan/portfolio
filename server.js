@@ -1,7 +1,7 @@
 //modules from other files
 const path = require('path');
 const express = require('express');
-const PORT = process.env.PORT || 8080;
+const PORT = process.env.PORT || 80;
 //
 //middleware
 const app = express();

@@ -1,3 +1,2 @@
-npm run build
 sudo docker-compose build
-sudo docker run -p 80 
+sudo docker create -p 80:80 
