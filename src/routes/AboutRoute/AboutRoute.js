@@ -17,6 +17,7 @@ function AboutRoute() {
   return (
     <div className="aboutroute">
       Coming soon...
+      
       {/* <Intro /> */}
       {/* <Hobbies /> */}
       {/* <Biography /> */}
