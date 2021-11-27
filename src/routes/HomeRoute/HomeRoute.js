@@ -3,7 +3,7 @@ import './HomeRoute.css';
 import Arrow from '../../components/Arrow/Arrow';
 let intro_header_text = "Adventure Awaits!";
 let intro_subheading_text = "Mountains can’t climb themselves. Computers don’t program themselves. What are you waiting for? Go embark on your life’s adventure! ";
-let greeting_text = "Hi there I’m Nick, I’m a computer scientist that loves embedded systems, cloud architecture, bourbon, and adventures. Welcome to nicknoonan.net. P.S. I’m probably staring a computer screen writing code right now.";
+let greeting_text = "Hi there I’m Nick, I’m a computer scientist that loves embedded systems, cloud architecture, linux, and adventures. Welcome to nicknoonan.net. P.S. I’m probably staring a computer screen writing code right now.";
 let about_header_text = "Learn more about me!";
 let about_subheading_text = "Trust me I’m not that interesting, but here’s a page dedicated to me by me. I enjoy nerdy science stuff, programming, outdoor adventures, and counting the number of atoms in the universe.";
 let climbing_gif = "tr.gif"
