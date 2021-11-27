@@ -16,6 +16,7 @@ const bio_title = "Nicholas Noonan";
 function AboutRoute() {
   return (
     <div className="aboutroute">
+      {/*  */}
       Coming soon...
       {/*  */}
       {/* <Intro /> */}
