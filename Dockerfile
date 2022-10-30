@@ -1,12 +1,22 @@
-FROM node:16-alpine
-EXPOSE 80/tcp
-EXPOSE 80/udp
-WORKDIR /home
-COPY package-lock.json /home/package-lock.json
-COPY package.json /home/package.json
-COPY public /home/public
-COPY src /home/src
-COPY server.js /home/server.js
+FROM node:lts-alpine as deps
+WORKDIR /app
+COPY package-lock.json ./
+COPY package.json ./
 RUN npm install
+RUN npm install react-scripts@5.0.0
+
+FROM node:lts-alpine as builder
+WORKDIR /app
+COPY --from=deps /app ./
+COPY public ./public
+COPY src ./src
+COPY server.js ./
+COPY nginx ./nginx
 RUN npm run build
-CMD node /home/server.js
+
+FROM nginx:stable-alpine
+COPY --from=builder /app/build /usr/share/nginx/html
+COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
+EXPOSE 80
+CMD ["nginx","-g","daemon off;"]
+
