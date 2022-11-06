@@ -34,6 +34,7 @@ function HomeRoute() {
 function Gifs(props) {
   return (
     props.gifs.map((gif, index) => {
+      console.log(props.id);
       let className = (props.id != index) ? "disableImage" : "enabledImage";
       return(<img key={index} src={gif.src} alt={gif.alt} className={className}/>);
     })
@@ -61,7 +62,7 @@ function Intro() {
           <div className='climbing-gif-container'>
             <Gifs gifs={climbing_gifs} id={climbingGifId}/>
             <button onClick={() => setClimbingGifId((climbingGifId + 1) % climbing_gifs.length)} id="climbing-btn-right" class="climbing-btn-right"><i id="climbing-btn-right" class="climbing-gif-arrow climbing-gif-arrow-right"></i></button>
-            <button onClick={() => setClimbingGifId((climbingGifId - 1) % climbing_gifs.length)} id="climbing-btn-left" class="climbing-btn-left"><i id="climbing-btn-left" class="climbing-gif-arrow climbing-gif-arrow-left"></i></button>
+            <button onClick={() => setClimbingGifId(Math.abs((climbingGifId - 1) % climbing_gifs.length))} id="climbing-btn-left" class="climbing-btn-left"><i id="climbing-btn-left" class="climbing-gif-arrow climbing-gif-arrow-left"></i></button>
           </div>
         </div>
       </div>
