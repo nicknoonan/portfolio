@@ -4,6 +4,6 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    image: portfolio:latest
+    image: nicknoonan.azurecr.io/portfolio:dev
     ports:
-      - "8080:80"
+      - "80:80"

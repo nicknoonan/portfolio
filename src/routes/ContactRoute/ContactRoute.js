@@ -3,7 +3,7 @@ import React from "react";
 function ContactRoute() {
   return (
     <div>
-      <h1>Coming soon...</h1>     
+      <h1>Coming very soon...</h1>     
     </div>
   );
 }

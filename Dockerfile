@@ -11,10 +11,10 @@ COPY --from=deps /app ./
 COPY public ./public
 COPY src ./src
 COPY server.js ./
-COPY nginx ./nginx
 RUN npm run build
+COPY nginx ./nginx
 
-FROM nginx:stable-alpine
+FROM nginx:1.20-alpine
 COPY --from=builder /app/build /usr/share/nginx/html
 COPY nginx/nginx.conf /etc/nginx/conf.d/default.conf
 EXPOSE 80

@@ -1,7 +1,11 @@
+@import "react-alice-carousel/lib/alice-carousel.css";
 .homeroute {
   color: var(--primary-color);
 }
-
+.homeroute-gif {
+  max-width: 710px;
+  position: relative;
+}
 .homeroute-greeting-break {
   background-color: var(--primary-color);
   color: white;
@@ -13,6 +17,9 @@
   box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;
   border-radius: 15px;
 }
+.disableImage{
+  display: none;
+}
 .homeroute-intro-break {
   /* color: #637081; */
 }
@@ -22,6 +29,49 @@
 }
 .homeroute h2 {
   color: var(--gray-color);
+}
+.climbing-gif-container {
+  position: relative;
+}
+.climbing-gif-container img {
+  width: 100%;
+  height: auto;
+}
+.climbing-gif-container .climbing-btn-left, .climbing-gif-container .climbing-btn-right {
+  position: absolute;
+  top: 50%;  
+  background-color: #ffffff;
+  opacity: 0.3;
+  font-size: 16px;
+  padding: 12px 15px;
+  border: none;
+  cursor: pointer;
+  border-radius: 100%;
+}
+.climbing-gif-container .climbing-btn-left {
+  left: 1%;
+}
+.climbing-gif-container .climbing-btn-left:hover, .climbing-gif-container .climbing-btn-right:hover {
+  opacity: 0.8;
+}
+.climbing-gif-container .climbing-btn-right {
+  right: 1%;  
+}
+.climbing-gif-arrow {
+  border: solid black;
+  border-width: 0 3px 3px 0;
+  display: inline-block;
+  padding: 3px;
+}
+
+.climbing-gif-arrow-right {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+}
+
+.climbing-gif-arrow-left {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
 }
 /* mobile view */
 @media screen and (max-width: 700px) {

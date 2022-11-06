@@ -57,8 +57,8 @@ function Navigation() {
         {links_render}
       </div>
       <div className='navigation-icons'>
-        <a href='https://github.com/nicknoonan'><img id='github' src='github.jpg' /></a>
-        <a href='https://www.linkedin.com/in/nicholasnoonan/'><img id="linkedin" src='linkedin.png' /></a>
+        <a href='https://github.com/nicknoonan'><img id='github' src='https://saportfolio.blob.core.windows.net/portfolio/github.jpg' /></a>
+        <a href='https://www.linkedin.com/in/nicholasnoonan/'><img id="linkedin" src='https://saportfolio.blob.core.windows.net/portfolio/linkedin.png' /></a>
       </div>
     </div>
   );
