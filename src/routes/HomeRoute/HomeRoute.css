@@ -2,10 +2,6 @@
 .homeroute {
   color: var(--primary-color);
 }
-.homeroute-gif {
-  max-width: 710px;
-  position: relative;
-}
 .homeroute-greeting-break {
   background-color: var(--primary-color);
   color: white;
