@@ -1,16 +1,12 @@
 import React from "react";
 import './HomeRoute.css';
-import Carousel from 'nuka-carousel';
 import Arrow from '../../components/Arrow/Arrow';
-import {useState, useEffect} from 'react';
+import {useState} from 'react';
 let intro_header_text = "Adventure Awaits!";
 let intro_subheading_text = "Mountains can’t climb themselves. Computers don’t program themselves. What are you waiting for? Go embark on your life’s adventure! ";
 let greeting_text = "Hi there I’m Nick, I’m a computer scientist that loves embedded systems, cloud architecture, linux, and adventures. Welcome to nicknoonan.net. P.S. I’m probably staring a computer screen writing code right now.";
 let about_header_text = "Learn more about me!";
 let about_subheading_text = "Trust me I’m not that interesting, but here’s a page dedicated to me by me. I enjoy nerdy science stuff, programming, outdoor adventures, and counting the number of atoms in the universe.";
-// let climbing_gif = "https://saportfolio.blob.core.windows.net/portfolio/tablerock.gif";
-// let climbing_gif = "https://saportfolio.blob.core.windows.net/portfolio/good_heavens.gif";
-const handleDragStart = (e) => e.preventDefault();
 const climbing_gifs = [
   {
     src:"https://saportfolio.blob.core.windows.net/portfolio/good_heavens.gif",
@@ -19,6 +15,14 @@ const climbing_gifs = [
   {
     src:"https://saportfolio.blob.core.windows.net/portfolio/tablerock.gif",
     alt:"climbing jim dandy on table rock, nc"
+  },
+  {
+    src:"https://saportfolio.blob.core.windows.net/portfolio/lg_rap.gif",
+    alt:"linville gorge rapel"
+  },
+  {
+    src:"https://saportfolio.blob.core.windows.net/portfolio/senaca_climb.gif",
+    alt:"climbing senaca west virginia"
   }
 ];
 let headshot = "https://saportfolio.blob.core.windows.net/portfolio/headshot.jpg";
@@ -35,7 +39,7 @@ function Gifs(props) {
   return (
     props.gifs.map((gif, index) => {
       console.log(props.id);
-      let className = (props.id != index) ? "disableImage" : "enabledImage";
+      let className = (props.id !== index) ? "disableImage" : "enabledImage";
       return(<img key={index} src={gif.src} alt={gif.alt} className={className}/>);
     })
   )
@@ -60,9 +64,9 @@ function Intro() {
         {/* headshot or somesort of background overlay */}
         <div className='homeroute-gif'>
           <div className='climbing-gif-container'>
-            <Gifs gifs={climbing_gifs} id={climbingGifId}/>
+            <Gifs gifs={climbing_gifs} id={Math.abs(climbingGifId)}/>
             <button onClick={() => setClimbingGifId((climbingGifId + 1) % climbing_gifs.length)} id="climbing-btn-right" class="climbing-btn-right"><i id="climbing-btn-right" class="climbing-gif-arrow climbing-gif-arrow-right"></i></button>
-            <button onClick={() => setClimbingGifId(Math.abs((climbingGifId - 1) % climbing_gifs.length))} id="climbing-btn-left" class="climbing-btn-left"><i id="climbing-btn-left" class="climbing-gif-arrow climbing-gif-arrow-left"></i></button>
+            <button onClick={() => setClimbingGifId((climbingGifId - 1) % climbing_gifs.length)} id="climbing-btn-left" class="climbing-btn-left"><i id="climbing-btn-left" class="climbing-gif-arrow climbing-gif-arrow-left"></i></button>
           </div>
         </div>
       </div>
